@@ -1,0 +1,32 @@
+{
+  "name": "Reddit Time Machine",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Look at posts from a specific range of time in a subreddit",
+  "homepage_url": "https://github.com/yarabarla/Reddit-Time-Machine",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "page_action": {
+    "default_icon": "icons/icon19.png",
+    "default_title": "Reddit Time Machine",
+    "default_popup": "page_action.html"
+  },
+  "permissions": [
+    "contextMenus",
+    "tabs",
+    "https://reddit.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.reddit.com/*"
+      ],
+      "js": [
+        "inject.js"
+      ]
+    }
+  ]
+}
