@@ -15,18 +15,10 @@
     "default_popup": "page_action.html"
   },
   "permissions": [
-    "contextMenus",
-    "tabs",
-    "https://reddit.com/*"
+    "tabs"
   ],
-  "content_scripts": [
-    {
-      "matches": [
-        "https://www.reddit.com/*"
-      ],
-      "js": [
-        "inject.js"
-      ]
-    }
-  ]
+  "background": {
+    "scripts": ["eventPage.js"],
+    "persistent": false
+  }
 }
