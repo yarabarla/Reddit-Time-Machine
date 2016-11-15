@@ -14,9 +14,18 @@
     </style>
 
     <div id="mainPopup">
-    <h1>Hello extensionizr!</h1>
-    <p>To shut this popup down, edit the manifest file and remove the "default popup" key. To edit it, just edit ext/page_action/page_action.html. The CSS is there, too.</p>
+    <h1>Reddit Time Machine</h1>
+    <form id="date-pickers">
+      <h2>From</h2>
+      <input type="date" id="from"/>
+      <h2>To</h2>
+      <input type="date" id="to"/>
+    </form>
+
+		<button id="submit">Blast to the past</button>
     </div>
 
+    <script src="jquery.min.js"></script>
+    <script src="popup.js"></script>
   </body>
 </html>
